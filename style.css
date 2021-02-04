@@ -1,0 +1,170 @@
+html {
+  height: 100%;
+  background: radial-gradient(circle, #fff, #ccc);
+}
+
+#container {
+  height: 670px;
+  width: 800px;
+  background-color: #9dd2ea;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 0px 0px #009de4;
+  -moz-box-shadow: 0px 4px 0px 0px #009de4;
+  -webkit-box-shadow: 0px 4px 0px 0px #009de4;
+
+  /* box-shadow: [horizontal offset], [vertical offset], 
+  [blur radius], [optional spread radius], [color] */
+  position: relative;
+}
+
+#score {
+  background-color: #f1ff92;
+  color: #888e5f;
+  padding: 11px;
+  position: absolute;
+  left: 750px;
+  box-shadow: 0px 4px 0px #9da853;
+}
+
+#correct {
+  position: absolute;
+  left: 260px;
+  background-color: #42e252;
+  color: white;
+  padding: 11px;
+  display: none;
+}
+
+#wrong {
+  position: absolute;
+  left: 260px;
+  background-color: #de401a;
+  color: white;
+  padding: 11px;
+  display: none;
+}
+
+#fruitsContainer {
+  width: 650px;
+  height: 400px;
+  margin: 50px auto 10px auto;
+  background-color: white;
+  box-shadow: 0px 4px #535aa8;
+  font-size: 100px;
+  text-align: center;
+  font-family: sans-serif;
+  /* text vertical align is what line-height does; */
+  line-height: 1.5em;
+  color: black;
+  overflow: hidden;
+  position: relative;
+}
+
+#instruction {
+  width: 450px;
+  height: 50px;
+  background-color: #b481d9;
+  margin: 10px auto;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0px 4px #8153a8;
+}
+
+#answer-choices {
+  width: 450px;
+  height: 100px;
+  margin: 5px auto;
+}
+
+.box {
+  width: 85px;
+  height: 85px;
+  background-color: white;
+  float: left;
+  margin-right: 36px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  line-height: 80px;
+  /* so the box can move relative to its original position */
+  position: relative;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+}
+
+/* .box:hover,
+#start-reset:hover {
+  background-color: #9c89f6;
+  color: white;
+  box-shadow: 0px 4px #6b54d3;
+} */
+
+.box:active,
+#start-reset:active {
+  background-color: #9c89f6;
+  color: white;
+  box-shadow: 0px 0px #6b54d3;
+  top: 4px;
+}
+
+#box4 {
+  margin-right: 0;
+}
+
+#start-reset {
+  width: 78px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  /* so the box can move relative to its original position */
+  position: relative;
+  transition: all 0.2s;
+}
+
+#trialsLeft {
+  width: 80px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  background-color: #f1ff92;
+  color: #888e5f;
+  border-radius: 3px;
+  box-shadow: 0px 4px 0px #9da853;
+  /* difference between this and display: none is that visibility means other elements treat it as if it is still there display none is the opposite */
+  /* visibility: hidden; */
+  display: none;
+}
+
+#game-over {
+  height: 200px;
+  width: 500px;
+  background: linear-gradient(#f3ca6b, #f3706c);
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 165px;
+  left: 170px;
+  z-index: 2;
+  display: none;
+}
+
+/* #fruitimg {
+  position: relative;
+  top: -109px;
+} */
+.fruit {
+  display: none;
+  position: absolute;
+}
